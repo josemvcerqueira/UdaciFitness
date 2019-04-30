@@ -92,6 +92,7 @@ class AddEntry extends Component {
 		}));
 
 		// Navigate to home
+		this.props.navigation.goBack();
 
 		submitEntry({ key, entry });
 
@@ -105,6 +106,7 @@ class AddEntry extends Component {
 		this.props.addEntry({ [key]: getDailyReminderValue() });
 
 		// Route to home
+		this.props.navigation.goBack();
 
 		removeEntry(key);
 	};
