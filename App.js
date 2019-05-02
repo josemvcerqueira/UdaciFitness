@@ -16,8 +16,12 @@ import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import { Constants } from "expo";
 import EntryDetail from "./components/EntryDetail";
 import Live from "./components/Live";
+import { setLocalNotification } from "./utils/helpers";
 
 class App extends React.Component {
+	componenDidMount() {
+		setLocalNotification();
+	}
 	render() {
 		return (
 			<Provider store={createStore(reducer)}>
